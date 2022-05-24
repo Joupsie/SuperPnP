@@ -1,6 +1,8 @@
 class Superpower < ApplicationRecord
   belongs_to :user
   has_many :bookings
+  has_many :reviews
+
 
   validates :name, presence: true
   validates :description, presence: true
@@ -12,4 +14,5 @@ class Superpower < ApplicationRecord
   pg_search_scope :search_by_name,
                     against: [ :name ],
                     using: { tsearch: { prefix: true } }
+
 end

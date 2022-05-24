@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @superpower = Superpower.find(params[:superpower_id])
     @booking.superpower = @superpower
     if @booking.save
-      redirect_to superpowers_path
+      redirect_to superpower_path(@superpower)
     else
       render :new
     end
