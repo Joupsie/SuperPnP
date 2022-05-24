@@ -1,4 +1,14 @@
-<h1><strong>YO</strong></h1>
-<% @superpowers.each do |superpower| %>
+
+<h1><strong>All the superpowers</strong></h1>
+<div>
+  <% @superpowers.each do |superpower| %>
+  <ul>
+  <li>
  <%= superpower.name %>
+ <%= superpower.description%>
+ <%= superpower.price %>
  <% end %>
+ </li>
+ </ul>
+ </div>
+ <%= link_to "Create a new superpower", new_superpower_path %>

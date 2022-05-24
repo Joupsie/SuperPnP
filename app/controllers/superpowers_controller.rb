@@ -1,8 +1,9 @@
 class SuperpowersController < ApplicationController
-  before_action :set_list, only: [:show, :destroy]
+  before_action :set_superpower, only: [:show, :destroy]
 
   def index
    @superpowers = Superpower.all
+
   end
 
   def show
@@ -14,6 +15,7 @@ class SuperpowersController < ApplicationController
 
   def create
     @superpower = Superpower.new(superpower_params)
+    @superpower.user = current_user
     if @superpower.save
       redirect_to superpower_path(@superpower)
     else
