@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   has_many :superpowers
   has_many :bookings
+
 end
