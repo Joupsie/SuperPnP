@@ -21,7 +21,7 @@ class SuperpowersController < ApplicationController
     @superpower = Superpower.new(superpower_params)
     @superpower.user = current_user
     if @superpower.save
-      redirect_to superpowers_path(@superpowers)
+      redirect_to reservation_validate_path
     else
       render :new
     end

@@ -9,8 +9,9 @@ class BookingsController < ApplicationController
     @booking = Booking.new(booking_params)
     @superpower = Superpower.find(params[:superpower_id])
     @booking.superpower = @superpower
+    @booking.user = current_user
     if @booking.save
-      redirect_to superpowers_path
+      redirect_to reservation_validate_path
     else
       render :new
     end
@@ -25,6 +26,6 @@ class BookingsController < ApplicationController
   private
 
   def booking_params
-    params.require(:booking).permit(:user_id, :superpower_id)
+    params.require(:booking).permit(:user_id, :superpower_id, :starts_at, :ends_at)
   end
 end
