@@ -1,14 +1,16 @@
 
 <h1><strong>All the superpowers</strong></h1>
 <div>
+
+
   <% @superpowers.each do |superpower| %>
   <br>
 <div class="cards">
  <p><%= superpower.name %></p>
  <p><%= superpower.description%></p>
  <p><%= superpower.price %></p>
-
+<%= link_to superpower.name, superpower_path(superpower) %>
  <% end %>
 </div>
  </div>
- <%= link_to "Create a new superpower", new_superpower_path %>
+ <%= link_to "Rent your superpower", new_superpower_path %>
