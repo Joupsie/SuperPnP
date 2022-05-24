@@ -10,5 +10,9 @@ Rails.application.routes.draw do
     resources :reviews, only: [ :new, :create ]
   end
   resources :bookings, only: :destroy
+
+  get 'reservation/validate', to: 'superpowers#reservation'
+
   resources :reviews, only: :destroy
+
 end
