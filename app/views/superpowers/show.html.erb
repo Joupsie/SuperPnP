@@ -1,0 +1,7 @@
+<p><%=@superpower.id  %></p>
+<p><%= @superpower.name %> </p>
+<p><%= @superpower.description %> </p>
+
+<%=link_to new_superpower_booking_path(@superpower) do %>
+        <i class="fa fa-plus"></i>boooooking
+      <% end %>
