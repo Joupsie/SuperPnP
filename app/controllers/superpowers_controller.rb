@@ -3,7 +3,11 @@ class SuperpowersController < ApplicationController
 
 
   def index
-   @superpowers = Superpower.all
+    if params[:search].present?
+      @superpowers = Superpower.search_by_name(params[:search])
+    else
+      @superpowers = Superpower.all
+    end
   end
 
   def show
