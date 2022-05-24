@@ -21,12 +21,20 @@
 <h1>Tous les superpowers</h1>
 <%= simple_form_for :search, method: :get,
                              defaults: { required: false } do |f| %>
-  <%= f.input :search, label: "Recherche par name",
+  <%= f.input :search, label: "Search by name",
                        input_html: { name: 'search',
                                      value: params.dig(:search) } %>
-  <%= f.submit "looking for" %>
+
+ <%= f.input :max_price, label: "Prix max",
+  required: false,
+  input_html: { type: :number,
+  name: :max_price,
+  value: params.dig(:max_price) } %>
+
+  <%= f.submit "looking for " %>
 <% end %>
 
+----------------------------------------------------------------
 <ul>
   <% @superpowers.each do |superpower| %>
     <li>

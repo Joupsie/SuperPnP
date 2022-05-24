@@ -8,6 +8,9 @@ class SuperpowersController < ApplicationController
     else
       @superpowers = Superpower.all
     end
+    if params[:max_price].present?
+      @superpowers = @superpowers.where("price <= ?", params[:max_price])
+    end
   end
 
   def show
@@ -20,7 +23,9 @@ class SuperpowersController < ApplicationController
   def create
     @superpower = Superpower.new(superpower_params)
     @superpower.user = current_user
+
     if @superpower.save
+
       redirect_to superpowers_path(@superpowers)
     else
       render :new
