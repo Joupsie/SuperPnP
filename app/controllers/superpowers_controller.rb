@@ -8,6 +8,20 @@ class SuperpowersController < ApplicationController
     else
       @superpowers = Superpower.all
     end
+    if params[:min_price].present?
+      @superpowers = @superpowers.where("price >= ?", params[:min_price])
+    end
+    if params[:max_price].present?
+      @superpowers = @superpowers.where("price <= ?", params[:max_price])
+    end
+    if params[:name].present?
+      @superpowers = @superpowers.where(name: params[:name])
+    end
+    if params[:starts_at].present? && params[:ends_at].present?
+      @superpowers = @superpowers.select do |superpower|
+        superpower.is_available?(params[:starts_at], params[:ends_at])
+      end
+    end
   end
 
   def show
@@ -20,8 +34,11 @@ class SuperpowersController < ApplicationController
   def create
     @superpower = Superpower.new(superpower_params)
     @superpower.user = current_user
+
     if @superpower.save
-      redirect_to reservation_validate_path
+
+      redirect_to superpowers_path(@superpowers)
+
     else
       render :new
     end
