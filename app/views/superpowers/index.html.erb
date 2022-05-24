@@ -31,9 +31,13 @@
   name: :max_price,
   value: params.dig(:max_price) } %>
 
+ <%= f.input :min_price, label: "Prix min",
+  required: false,
+  input_html: { type: :number,
+  name: :min_price,
+  value: params.dig(:min_price) } %>
   <%= f.submit "looking for " %>
-<% end %>
-
+ <% end %>
 ----------------------------------------------------------------
 <ul>
   <% @superpowers.each do |superpower| %>
@@ -42,3 +46,15 @@
     </li>
   <% end %>
 </ul>
+
+<%= simple_form_for :search, method: :get,
+                             defaults: { required: false } do |f| %>
+  <%= f.input :starts_at, label: "Début le",
+                          input_html: { type: :date,
+                                        name: :starts_at,
+                                        value: params.dig(:starts_at) } %>
+  <%= f.input :ends_at, label: "Fin le",
+                        input_html: { type: :date,
+                                      name: :ends_at,
+                                      value: params.dig(:ends_at) } %>
+<% end %>
