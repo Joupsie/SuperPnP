@@ -3,12 +3,15 @@
 
 
   <% @superpowers.each do |superpower| %>
+  <ul>
   <li>
  <%= link_to superpower.name, superpower_path(superpower) %>
  <%= superpower.description%>
  <%= superpower.price %>
+
  <% end %>
- </li>
- </ul>
+    </li>
+  </ul>
+</div>
  </div>
  <%= link_to "Rent your superpower", new_superpower_path %>
