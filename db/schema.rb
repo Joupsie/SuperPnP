@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_05_23_131619) do
+ActiveRecord::Schema.define(version: 2022_05_24_141645) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,14 @@ ActiveRecord::Schema.define(version: 2022_05_23_131619) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["superpower_id"], name: "index_bookings_on_superpower_id"
     t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "content"
+    t.bigint "superpower_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["superpower_id"], name: "index_reviews_on_superpower_id"
   end
 
   create_table "superpowers", force: :cascade do |t|
@@ -49,5 +57,6 @@ ActiveRecord::Schema.define(version: 2022_05_23_131619) do
 
   add_foreign_key "bookings", "superpowers"
   add_foreign_key "bookings", "users"
+  add_foreign_key "reviews", "superpowers"
   add_foreign_key "superpowers", "users"
 end
