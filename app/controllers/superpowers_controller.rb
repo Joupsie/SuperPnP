@@ -1,14 +1,16 @@
 class SuperpowersController < ApplicationController
-  before_action :set_superpower, only: [:show, :destroy]
+  before_action :set_superpower, only: [:update, :edit, :show, :destroy]
+
 
   def index
-   @superpowers = Superpower.all
-
+    if params[:search].present?
+      @superpowers = Superpower.search_by_name(params[:search])
+    else
+      @superpowers = Superpower.all
+    end
   end
 
   def show
-
-
   end
 
   def new
@@ -25,8 +27,18 @@ class SuperpowersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
+  def update
+    @superpower.update(params[:superpower])
+    @superpower.user = current_user
+    redirect_to superpowers_path(@superpowers)
+  end
+
   def destroy
     @superpower.destroy
+    @superpower.user = current_user
     redirect_to superpowers_path
   end
 
