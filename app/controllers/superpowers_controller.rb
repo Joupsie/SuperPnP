@@ -1,11 +1,13 @@
 class SuperpowersController < ApplicationController
-  before_action :set_list, only: [:show, :destroy]
+  before_action :set_superpower, only: [:show, :destroy]
 
   def index
    @superpowers = Superpower.all
   end
 
   def show
+
+
   end
 
   def new

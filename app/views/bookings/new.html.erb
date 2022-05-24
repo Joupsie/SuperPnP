@@ -1,0 +1,4 @@
+<%= simple_form_for [ @superpower, @booking ] do |f| %>
+  <%= f.association :superpower %>
+  <%= f.submit "CONFIRM AND PAY", class: "btn btn-primary" %>
+<% end %>
