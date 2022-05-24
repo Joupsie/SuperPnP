@@ -38,6 +38,7 @@ class SuperpowersController < ApplicationController
     if @superpower.save
 
       redirect_to superpowers_path(@superpowers)
+
     else
       render :new
     end

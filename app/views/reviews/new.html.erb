@@ -1,0 +1,4 @@
+<%= simple_form_for [ @superpower, @review ] do |f| %>
+  <%= f.input :content %>
+  <%= f.submit "Ajoutes un commentaire", class: "btn btn-primary" %>
+<% end %>
