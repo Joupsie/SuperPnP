@@ -1,15 +1,17 @@
-<p>
+<div class ="img_banner">
   <% @superpower.photos.each do |photo|%>
     <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
   <% end %>
-</p>
-<p><%=@superpower.id  %></p>
-<p><%= @superpower.name %> </p>
-<p><%= @superpower.description %> </p>
+</div>
+
+<div class ="superpower_card">
+  <h1><%= @superpower.name %> </h1>
+  <h2><%= @superpower.description %> </h2>
+</div>
 
 <div class="container">
   <div class="form-wrapper">
-  <h2>Choisis tes dates de location !!</h2>
+  <p>Commences ta réservation :</p>
     <%= simple_form_for [@superpower, @booking] do |f| %>
       <%= f.input :starts_at, label: "Sélectionnez vos dates:",
                                as: :string,
@@ -27,15 +29,6 @@
 <div id="booking-form-div"
      data-bookings="<%= @bookings_dates.to_json %>">
 </div>
-
-<%=link_to new_superpower_booking_path(@superpower) do %>
-        <i class="fa fa-plus"></i>booking
-      <% end %>
-  <br>
-  <br>
-  <%=link_to root_path do %>
-        <i class="fa fa-history"></i>Rollback
-      <% end %>
 <br>
 <br>
 <div data-controller="popup">
@@ -45,37 +38,26 @@
       <%= f.submit "Ajoutes un commentaire", class: "btn btn-primary"%>
     <% end %>
   </div>
-  <a href="#" data-action="click->popup#toggleModal">review</a>
+  <a href="#" data-action="click->popup#toggleModal">Add a review !</a>
 </div>
-
 <br>
 <br>
-<%=link_to new_superpower_booking_path(@superpower) do %>
-        <i class="fa fa-plus"></i>
-      <% end %>
-      <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to remove your Superpower? ", class: 'text-danger'} %>
-      <%= link_to "edit", edit_superpower_path(@superpower) =%>
-
-
+<hr>
   <div class="col-12 col-sm-6">
-      <h3>Reviews</h3>
-      <% if @superpower.reviews.empty? %>
-        <small><em class="text-muted">Be the first one to review this list</em></small>
-      <% end %>
+    <h3>Reviews</h3>
+    <% if @superpower.reviews.empty? %>
+      <small><em class="text-muted">Be the first one to review this list</em></small>
+    <% end %>
       <% @superpower.reviews.each do |review| %>
-        <div>
           <% review.content do %>
             <i class="fas fa-star star-yellow"></i>
           <% end %>
-          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
-          <p class="mb-0"><%= review.content %></p>
+      <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+      <p class="mb-0"><%= review.content %></p>
       <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
-      <%= link_to "delete", review_path(review), method: :edit, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
-        </div>
-        <hr>
       <% end %>
-    </div>
-    <br>
-    <br>
-    </div>
-    </div>
+  </div>
+  <hr>
+  <%=link_to root_path do %>
+        <i class="fa fa-history"></i>Rollback
+      <% end %>
