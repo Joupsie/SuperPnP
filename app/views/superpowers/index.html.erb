@@ -2,8 +2,9 @@
 <div>
 
 
-  <% @superpowers.each do |superpower| %>
   <ul>
+  <% @superpowers.each do |superpower| %>
+
   <li>
  <%= link_to superpower.name, superpower_path(superpower) %>
  <%= superpower.description%>
