@@ -1,0 +1,44 @@
+.containerSP {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  min-height: 1000px;
+  min-width: 500px;
+  background: linear-gradient(180deg, #100050, #24126d, #412e8a, #6554a8, #9083c5, #c4bce2, #ffffff);
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+.title2 {
+  position: relative;
+  font-weight: bold;
+  font-size: 200px;
+  margin-left: 5%;
+  margin-top: 20%;
+  color: rgba(255, 0, 0, 0.2);
+  font-family: "Avengeance";
+}
+
+.title2:hover {
+  color: rgba(255, 0, 0, 0.67);
+  font-size: 202px;
+  transition-duration: 0.2;
+}
+
+.title {
+  position: absolute;
+  top: 15px;
+  left: 20px;
+  font-weight: bold;
+  font-size: 200px;
+  margin-left: 2%;
+  margin-top: 20%;
+  color: rgba(0, 0, 0, 0.632);
+  font-family: "Avengeance";
+}
+
+.logoSP {
+  object-fit: cover;
+  margin-top: 30%;
+  height: 300px;
+  width: 300spx;
+}
