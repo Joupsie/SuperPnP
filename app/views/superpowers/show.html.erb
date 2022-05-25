@@ -6,7 +6,7 @@
 
 
 <%=link_to new_superpower_booking_path(@superpower) do %>
-        <i class="fa fa-plus"></i>boooooking
+        <i class="fa fa-plus"></i>booking
       <% end %>
   <br>
   <br>
@@ -16,11 +16,17 @@
 <br>
 <br>
 <%=link_to new_superpower_review_path(@superpower) do %>
-        <i class="fa fa-plus"></i>Revieeeew le power
+        <i class="fa fa-plus"></i>Review your superpower
       <% end %>
 
 <br>
 <br>
+<%=link_to new_superpower_booking_path(@superpower) do %>
+        <i class="fa fa-plus"></i>
+      <% end %>
+      <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to remove your Superpower? ", class: 'text-danger'} %>
+      <%= link_to "edit", edit_superpower_path(@superpower) =%>
+
 
   <div class="col-12 col-sm-6">
       <h3>Reviews</h3>
@@ -28,13 +34,14 @@
         <small><em class="text-muted">Be the first one to review this list</em></small>
       <% end %>
       <% @superpower.reviews.each do |review| %>
-        <div>re
+        <div>
           <% review.content do %>
             <i class="fas fa-star star-yellow"></i>
           <% end %>
           <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
           <p class="mb-0"><%= review.content %></p>
       <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
+      <%= link_to "delete", review_path(review), method: :edit, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
         </div>
         <hr>
       <% end %>
