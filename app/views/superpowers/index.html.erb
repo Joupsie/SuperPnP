@@ -1,3 +1,4 @@
+
 <h1><strong>All the superpowers</strong></h1>
 <div>
   <ul>
@@ -7,65 +8,61 @@
  <%= link_to superpower.name, superpower_path(superpower) %>
  <%= superpower.description%>
  <%= superpower.price %>
-      <div class="rate">
-    <input type="radio" id="star5" name="rate" value="5" />
-    <label for="star5" title="text">5 stars</label>
-    <input type="radio" id="star4" name="rate" value="4" />
-    <label for="star4" title="text">4 stars</label>
-    <input type="radio" id="star3" name="rate" value="3" />
-    <label for="star3" title="text">3 stars</label>
-    <input type="radio" id="star2" name="rate" value="2" />
-    <label for="star2" title="text">2 stars</label>
-    <input type="radio" id="star1" name="rate" value="1" />
-    <label for="star1" title="text">1 star</label>
+      >
+
+<%# barre de recherche %>
+<h1>All superpowers</h1>
+  <div>
+    <div>
+      <%= simple_form_for :search, method: :get,
+        defaults: { required: false } do |f| %>
+          <%= f.input :search, label: "Which superpower do you want?",
+          input_html: { name: 'search',
+          value: params.dig(:search) } %>
+      <%= f.input :min_price, label: "Min price",
+        required: false,
+        input_html: { type: :number,
+        name: :min_price,
+        value: params.dig(:min_price) } %>
+      <%= f.input :max_price, label: "Max price",
+        required: false,
+        input_html: { type: :number,
+        name: :max_price,
+        value: params.dig(:max_price) } %>
+        <% end %>
+    </div>
+    <div>
+    <%= simple_form_for :search, method: :get,
+        defaults: { required: false } do |f| %>
+      <%= f.input :starts_at, label: "Start at",
+          input_html: { type: :date,
+                        name: :starts_at,
+                        value: params.dig(:starts_at) } %>
+      <%= f.input :ends_at, label: "End at",
+          input_html: { type: :date,
+                        name: :ends_at,
+                        value: params.dig(:ends_at) } %>
+      </div>
+      <%= f.submit "looking for " %>
+      <% @superpowers.each do |superpower| %>
+      <li><%= superpower.name %> | <%= superpower.price %> | <%= superpower.description %></li>
+    <% end %>
+    <% end %>
   </div>
 
- <% end %>
-    </li>
-  </ul>
+<%= link_to "Rent your superpower", new_superpower_path, class: "btn btn-ghost"%>
+
+
+<div  class="container">
+<h1><strong>All the superpowers</strong></h1>
+    <div class="cards-container">
+              <% @superpowers.each do |superpower| %>
+        <div class="superpowerCard">
+                <%= image_tag "superpower.jpg", alt: "superpower", width: 200 %>
+                <%= link_to superpower.name, superpower_path(superpower) %>
+                <%= superpower.description%>
+                <%= superpower.price %>
+        </div>
+              <% end %>
+    </div>
 </div>
- </div>
- <%= link_to "Rent your superpower", new_superpower_path %>
-
-
-
-<h1>Tous les superpowers</h1>
-<%= simple_form_for :search, method: :get,
-                             defaults: { required: false } do |f| %>
-  <%= f.input :search, label: "Search by name",
-                       input_html: { name: 'search',
-                                     value: params.dig(:search) } %>
-
- <%= f.input :max_price, label: "Prix max",
-  required: false,
-  input_html: { type: :number,
-  name: :max_price,
-  value: params.dig(:max_price) } %>
-
- <%= f.input :min_price, label: "Prix min",
-  required: false,
-  input_html: { type: :number,
-  name: :min_price,
-  value: params.dig(:min_price) } %>
-  <%= f.submit "looking for " %>
- <% end %>
-----------------------------------------------------------------
-<ul>
-  <% @superpowers.each do |superpower| %>
-    <li>
-      <%= superpower.name %> | <%= superpower.price %> | <%= superpower.description %>
-    </li>
-  <% end %>
-</ul>
-
-<%= simple_form_for :search, method: :get,
-                             defaults: { required: false } do |f| %>
-  <%= f.input :starts_at, label: "Début le",
-                          input_html: { type: :date,
-                                        name: :starts_at,
-                                        value: params.dig(:starts_at) } %>
-  <%= f.input :ends_at, label: "Fin le",
-                        input_html: { type: :date,
-                                      name: :ends_at,
-                                      value: params.dig(:ends_at) } %>
-<% end %>

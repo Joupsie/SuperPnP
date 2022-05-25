@@ -1,12 +1,14 @@
-.navbar-lewagon {
-  justify-content: space-between;
-  background: white;
+.container-fluid {
+  display: flex;
+  justify-content: center !important;
+  background: linear-gradient(180deg, #100050, #24126D, #412E8A, #6554A8, #9083C5, #C4BCE2, #FFFFFF);
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
+.navbar-lewagon #navbarDropdown {
+  width: 140px;
 }

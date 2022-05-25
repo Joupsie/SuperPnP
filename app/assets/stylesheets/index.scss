@@ -1,0 +1,45 @@
+h1 {
+  text-align: center;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.superpowerCard{
+  overflow: hidden;
+  height: 120px;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  align-items: center;
+  margin: 20px;
+}
+
+.superpowerCard a {
+  text-decoration:none;
+
+}
+
+.btn-ghost {
+  color: #4A4A4A;
+  border: 1px solid #3a40b6;
+  padding: 8px 24px;
+  border-radius: 50px;
+  font-weight: lighter;
+  opacity: 0.6;
+  transition: opacity 0.3s ease;
+}
+
+.cards-container{
+  padding-bottom: 20px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+
+}
+
+.superpowerCard img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+}

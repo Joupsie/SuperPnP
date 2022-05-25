@@ -16,7 +16,7 @@ import "bootstrap"
 
 import "controllers"
 
-import { initFlatpickr } from '../plugins/flatpickr';
+import { initFlatpickr } from "../plugins/flatpickr"
 
 document.addEventListener('turbolinks:load', () => {
   initFlatpickr();
