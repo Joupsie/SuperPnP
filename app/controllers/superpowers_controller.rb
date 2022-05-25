@@ -1,7 +1,6 @@
 class SuperpowersController < ApplicationController
   before_action :set_superpower, only: [:update, :edit, :show, :destroy]
 
-
   def index
     if params[:search].present?
       @superpowers = Superpower.search_by_name(params[:search])
@@ -25,6 +24,13 @@ class SuperpowersController < ApplicationController
   end
 
   def show
+    @booking = Booking.new
+    @bookings_dates = @superpower.bookings.map do |booking|
+      {
+        from: booking.starts_at,
+        to: booking.ends_at
+      }
+    end
   end
 
   def new
@@ -48,15 +54,16 @@ class SuperpowersController < ApplicationController
   end
 
   def update
-    @superpower.update(params[:superpower])
-    @superpower.user = current_user
+    @superpower.update(superpower_params)
     redirect_to superpowers_path(@superpowers)
   end
 
   def destroy
-    @superpower.destroy
+    @superpower = Superpower.find(params[:id])
     @superpower.user = current_user
-    redirect_to superpowers_path
+    @superpower.destroy
+    redirect_to superpowers_path(@superpowers)
+
   end
 
   private
