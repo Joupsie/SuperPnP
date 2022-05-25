@@ -22,9 +22,10 @@
 <br>
 <br>
 <%=link_to new_superpower_booking_path(@superpower) do %>
-        <i class="fa fa-plus"></i>booking
+        <i class="fa fa-plus"></i>
       <% end %>
       <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to remove your Superpower? ", class: 'text-danger'} %>
+      <%= link_to "edit", edit_superpower_path(@superpower) =%>
 
 
   <div class="col-12 col-sm-6">
@@ -40,6 +41,7 @@
           <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
           <p class="mb-0"><%= review.content %></p>
       <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
+      <%= link_to "delete", review_path(review), method: :edit, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
         </div>
         <hr>
       <% end %>

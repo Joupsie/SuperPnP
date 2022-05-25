@@ -48,8 +48,7 @@ class SuperpowersController < ApplicationController
   end
 
   def update
-    @superpower.update(params[:superpower])
-    @superpower.user = current_user
+    @superpower.update(superpower_params)
     redirect_to superpowers_path(@superpowers)
   end
 

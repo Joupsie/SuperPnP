@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     end
 
   resources :superpowers do
-    resources :reviews, only: [ :new, :create ]
+    resources :reviews, only: [ :new, :create, :edit]
   end
   resources :bookings, only: :destroy
 
