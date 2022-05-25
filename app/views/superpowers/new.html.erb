@@ -1,4 +1,4 @@
-<h1><strong>YO</strong></h1>
+<h1><strong>The superpower I want to shared</strong></h1>
 
  <div class="container py-5">
   <div class="row">
@@ -6,6 +6,7 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Create a new superpower</h3>
         <%= simple_form_for @superpower do |f| %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.input :name %>
           <%= f.input :description %>
           <%= f.input :price %>
