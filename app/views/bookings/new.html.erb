@@ -5,13 +5,7 @@
 <p><%= @superpower.description %> </p>
 <br>
 <br>
-<h2>Choisis tes dates de location !!</h2>
-<%= simple_form_for [ @superpower, @booking ] do |f| %>
-  <%= f.input :starts_at, as: :date %>
-  <%= f.input :ends_at, as: :date  %>
-  <%= f.submit 'reserver' %>
 
-<% end %>
 <br>
 <%=link_to root_path do %>
         <i class="fa fa-history"></i>On revient au menu ?
