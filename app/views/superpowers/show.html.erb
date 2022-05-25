@@ -1,3 +1,8 @@
+<p>
+  <% @superpower.photos.each do |photo|%>
+    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+  <% end %>
+</p>
 <p><%=@superpower.id  %></p>
 <p><%= @superpower.name %> </p>
 <p><%= @superpower.description %> </p>
