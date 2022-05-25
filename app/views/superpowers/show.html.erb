@@ -38,9 +38,15 @@
       <% end %>
 <br>
 <br>
-<%=link_to new_superpower_review_path(@superpower) do %>
-        <i class="fa fa-plus"></i>Review your superpower
-      <% end %>
+<div data-controller="popup">
+  <div class="d-none" data-popup-target="modal">
+    <%= simple_form_for [ @superpower, @review ] do |f| %>
+      <%= f.input :content %>
+      <%= f.submit "Ajoutes un commentaire", class: "btn btn-primary"%>
+    <% end %>
+  </div>
+  <a href="#" data-action="click->popup#toggleModal">review</a>
+</div>
 
 <br>
 <br>

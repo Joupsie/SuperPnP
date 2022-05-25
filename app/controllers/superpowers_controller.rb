@@ -24,6 +24,8 @@ class SuperpowersController < ApplicationController
   end
 
   def show
+
+    @review = Review.new
     @booking = Booking.new
     @bookings_dates = @superpower.bookings.map do |booking|
       {
@@ -31,6 +33,7 @@ class SuperpowersController < ApplicationController
         to: booking.ends_at
       }
     end
+
   end
 
   def new
