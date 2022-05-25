@@ -1,7 +1,6 @@
 import flatpickr from "flatpickr"
 import rangePlugin from "flatpickr/dist/plugins/rangePlugin"
 
-
 const initFlatpickr = () => {
   const bookingForm = document.getElementById('booking-form-div');
   if (bookingForm) {
