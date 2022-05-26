@@ -57,12 +57,19 @@
 <div  class="container">
 <h1><strong>All the superpowers</strong></h1>
     <div class="cards-container">
-              <% @superpowers.each do |superpower| %>
-        <div class="superpowerCard">
-                <%= image_tag "superpower.jpg", alt: "superpower", width: 200 %>
-                <%= link_to superpower.name, superpower_path(superpower) %>
-                <%= superpower.description%>
-                <%= superpower.price %>
+      <% @superpowers.each do |superpower| %>
+        <div class="card-trip">
+          <% if superpower.photos.attached? %>
+          <%= cl_image_tag superpower.photos.first.key, height: 300, width: 400, crop: :fill %>
+          <% else %>
+          <%= image_tag "superpower.jpg" %>
+          <% end %>
+          <div class="card-trip-infos">
+              <h2 class="link"><%= link_to superpower.name, superpower_path(superpower) %></h2>
+              <h2><%= superpower.description%></h2>
+              <h2 class="card-trip-pricing"><%= superpower.price %>$</h2>
+              <%# class="card-trip-user avatar-bordered" %>
+          </div>
         </div>
               <% end %>
     </div>

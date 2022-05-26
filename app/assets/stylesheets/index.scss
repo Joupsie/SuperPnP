@@ -32,11 +32,11 @@ h1 {
 
 .cards-container{
   padding-bottom: 20px;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-
+  display: flex;
+  flex-wrap: wrap ;
+  align-items: center;
 }
+
 
 .superpowerCard img {
   height: 100%;
@@ -44,6 +44,64 @@ h1 {
   object-fit: cover;
 }
 
+.card-trip {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  height: 300px;
+  width: 450px;
+  margin:30px;
+
+}
+
+.card-trip > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  vertical-align: super;
+}
+
+.card-trip h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.card-trip p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+
+.card-trip .card-trip-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+
+}
+
+.card-trip-infos .card-trip-user {
+  position: absolute;
+  right: 16px;
+  top: -20px;
+  width: 40px;
+
+}
+
+.card-trip-infos h2{
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#3a40b6
+}
+
+.card-trip-infos a{
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#3a40b6
+=======
 
 .search-bar-container {
   display: flex;
@@ -77,4 +135,5 @@ h1 {
 .search-form {
   margin: 30px;
   flex-basis: 40%;
+
 }
