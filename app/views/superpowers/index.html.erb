@@ -45,12 +45,17 @@
 <div  class="container">
 <h1><strong>All the superpowers</strong></h1>
     <div class="cards-container">
-              <% @superpowers.each do |superpower| %>
-        <div class="superpowerCard">
-                <%= image_tag "superpower.jpg", alt: "superpower", width: 200 %>
-                <%= link_to superpower.name, superpower_path(superpower) %>
-                <%= superpower.description%>
-                <%= superpower.price %>
+      <% @superpowers.each do |superpower| %>
+        <div class="card-trip">
+         <% superpower.photos.each do |photo| %>
+          <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
+         <% end %>
+          <div class="card-trip-infos">
+              <%= link_to superpower.name, superpower_path(superpower) %>
+              <%= superpower.description%>
+              <h2 class="card-trip-pricing"><%= superpower.price %>$</h2>
+              <%# class="card-trip-user avatar-bordered" %>
+          </div>
         </div>
               <% end %>
     </div>
