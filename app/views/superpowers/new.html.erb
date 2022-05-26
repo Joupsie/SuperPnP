@@ -2,15 +2,15 @@
 
  <div class="container py-5">
   <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h3>Rent my superpower</h3>
+    <div  class="col-12 col-md-6 offset-lg-3">
+      <div class="NewCard p-3 shadow-6">
+        <h3>We need some informations about your superpower ☄️</h3>
         <%= simple_form_for @superpower do |f| %>
-          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+          <%= f.input :photo, as: :file, input_html: { multiple: true } %>
           <%= f.input :name %>
           <%= f.input :description %>
-          <%= f.input :price %>
-          <%= f.submit class: 'btn btn-flat' ,method: :create %>
+          <%= f.input :price, placeholder: "2000" %>
+          <%= f.submit class: 'btn btn-flat bg-white' ,method: :create %>
         <% end %>
          <%= link_to "Back to home page", superpowers_path %>
       </div>
