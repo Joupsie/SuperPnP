@@ -10,16 +10,9 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
   <body>
-    <header>
-      <div class="containerSP">
-        <h1 class="title">SuperPnP</h1>
-        <h1 class="title2">SuperPnP</h1>
-        <img class="logoSP" src="<%= asset_url('logoSP.png') %>" alt="">
-      </div>
-    </header>
+     <%= render 'shared/navbar' %>
       <%= render 'shared/flashes' %>
       <%= render 'shared/topnavbar' %>
     <%= yield %>
-    <%= render 'shared/navbar' %>
   </body>
 </html>
