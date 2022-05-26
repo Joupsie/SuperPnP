@@ -7,45 +7,51 @@
         <img class="logoSP" src="<%= asset_url('logoSP.png') %>" alt="">
       </div>
 <h1>All superpowers</h1>
-  <div>
-    <div>
+
+   
+      
       <%= simple_form_for :search, method: :get,
         defaults: { required: false } do |f| %>
-          <%= f.input :search, label: "Which superpower do you want?",
+          <%= f.input :search, placeholder: 'Which power do you want?',
           input_html: { name: 'search',
           value: params.dig(:search) } %>
-      <%= f.input :min_price, label: "Min price",
-        required: false,
-        input_html: { type: :number,
-        name: :min_price,
-        value: params.dig(:min_price) } %>
-      <%= f.input :max_price, label: "Max price",
-        required: false,
-        input_html: { type: :number,
-        name: :max_price,
-        value: params.dig(:max_price) } %>
-        <% end %>
-    </div>
-    <div>
-    <%= simple_form_for :search, method: :get,
-        defaults: { required: false } do |f| %>
-      <%= f.input :starts_at, label: "Start at",
-          input_html: { type: :date,
-                        name: :starts_at,
-                        value: params.dig(:starts_at) } %>
-      <%= f.input :ends_at, label: "End at",
-          input_html: { type: :date,
-                        name: :ends_at,
-                        value: params.dig(:ends_at) } %>
-      </div>
-      <%= f.submit "looking for " %>
-      <% @superpowers.each do |superpower| %>
-      <li><%= superpower.name %> | <%= superpower.price %> | <%= superpower.description %></li>
-    <% end %>
-    <% end %>
-  </div>
+          <%= f.input :min_price, placeholder: 'Minimum price',
+            required: false,
+            input_html: { type: :number,
+            name: :min_price,
+            value: params.dig(:min_price) } %>
+          <%= f.input :max_price, placeholder: "Maximum price",
+            required: false,
+            input_html: { type: :number,
+            name: :max_price,
+            value: params.dig(:max_price) } %>
+          <%= f.input :starts_at, place: "Start at",
+              input_html: { type: :date,
+                            name: :starts_at,
+                            value: params.dig(:starts_at) } %>
+          <%= f.input :ends_at, label: "End at",
+              input_html: { type: :date,
+                            name: :ends_at,
+                            value: params.dig(:ends_at) } %>
+            <div class= "search_bar_button">
+            <%= f.submit "Searching", class: "btn btn-ghost" %>
+              <% end %>
+          <%= link_to "Clear filters", superpowers_path, class: "btn btn-ghost"%>
+            </div>
+            </div>
 
-<%= link_to "Rent your superpower", new_superpower_path, class: "btn btn-ghost"%>
+            <div class = "text-part">
+
+  <p> "Marvel was started in 1939 by Martin Goodman as Timely Comics,
+  and by 1951 had generally become known" "as Atlas Comics. <br> The Marvel era began in 1961,
+  the year that the company launched The Fantastic Four and other superhero titles created by Stan Lee,
+  Jack Kirby, Steve Ditko and many others" </p>
+
+</div>
+    </div>
+
+
+<%# <%= link_to "Rent your superpower", new_superpower_path, class: "btn btn-ghost"%>
 
 
 <div  class="container">
