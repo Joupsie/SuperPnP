@@ -36,10 +36,6 @@ h1 {
   flex-wrap: wrap ;
   align-items: center;
 }
-  // flex-wrap: wrap;
-  // align-items: flex-start;
-  // justify-content: center;
-
 
 
 .superpowerCard img {
@@ -55,6 +51,7 @@ h1 {
   height: 300px;
   width: 450px;
   margin:30px;
+
 }
 
 .card-trip > img {
@@ -83,6 +80,7 @@ h1 {
   justify-content: space-between;
   align-items: flex-end;
   position: relative;
+
 }
 
 .card-trip-infos .card-trip-user {
@@ -90,4 +88,17 @@ h1 {
   right: 16px;
   top: -20px;
   width: 40px;
+
+}
+
+.card-trip-infos h2{
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#3a40b6
+}
+
+.card-trip-infos a{
+  text-decoration: none;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:#3a40b6
 }
