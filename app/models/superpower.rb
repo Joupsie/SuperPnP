@@ -1,7 +1,7 @@
 class Superpower < ApplicationRecord
   belongs_to :user
-  has_many :bookings
-  has_many :reviews
+  has_many :bookings, dependent: :delete_all
+  has_many :reviews, dependent: :delete_all
   has_many_attached :photos
 
   validates :name, presence: true
