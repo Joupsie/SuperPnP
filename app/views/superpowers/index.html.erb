@@ -8,8 +8,9 @@
       </div>
 <h1>All superpowers</h1>
 
-   
-      
+
+  <div class ="search-bar-container" >
+    <div class="search-form">
       <%= simple_form_for :search, method: :get,
         defaults: { required: false } do |f| %>
           <%= f.input :search, placeholder: 'Which power do you want?',
