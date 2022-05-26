@@ -101,7 +101,7 @@ h1 {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color:#3a40b6
-=======
+}
 
 .search-bar-container {
   display: flex;
@@ -136,4 +136,10 @@ h1 {
   margin: 30px;
   flex-basis: 40%;
 
+}
+
+.card-trip img {
+  height: 15em;
+  width: 100%;
+  object-fit: cover;
 }
