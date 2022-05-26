@@ -1,8 +1,8 @@
 <div class="topnavbar">
     <div class="left col-4">
       <ul class="text_left">
-        <li><a href="#index">Home</a></li>
-        <li><a href="superpowers#new">Rent</a></li>
+        <li><a href="<%= superpowers_path %>">Home</a></li>
+        <li><a href="<%= new_superpower_path %>">Rent</a></li>
       </ul>
     </div>
     <div class="logo col-4">
@@ -12,9 +12,9 @@
       <ul>
         <li><%= image_tag("chucklewok.jpg", :class => "style_user_picture") %></li>
         <% if user_signed_in? %>
-          <li class="logout" style="margin-top: 12px;"><a href="#destroy_user_session">Logout</a></li>
+          <li class="logout" style="margin-top: 12px;"><a href="<%= destroy_user_session_path %>">Logout</a></li>
         <% else %>
-          <li><a href="#new_user_session">Login</a></li>
+          <li><a href="<%= new_user_session_path %>">Login</a></li>
          <% end %>
       </ul>
     </div>
