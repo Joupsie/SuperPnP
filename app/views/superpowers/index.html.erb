@@ -6,9 +6,6 @@
   <div>
     <div>
 
-<%#
-<%# barre de recherche %>
-
   <div class ="search-bar-container" >
     <div class="search-form">
 
@@ -79,3 +76,15 @@
       <% end %>
     </div>
 </div>
+
+<%#
+<form novalidate="novalidate" class="simple_form search" action="/superpowers" accept-charset="UTF-8" method="get" style="display: flex;">
+          <div class="mb-3 string optional search_search"><label class="form-label string optional" for="search_search">Search</label><input class="form-control string optional" name="search" placeholder="Which power do you want?" type="text" id="search_search"></div>
+          <div class="mb-3 string optional search_min_price"><label class="form-label string optional" for="search_min_price">Min price</label><input class="form-control string optional" type="number" name="min_price" placeholder="Minimum price" id="search_min_price"></div>
+          <div class="mb-3 string optional search_max_price"><label class="form-label string optional" for="search_max_price">Max price</label><input class="form-control string optional" type="number" name="max_price" placeholder="Maximum price" id="search_max_price"></div>
+          <div class="mb-3 string optional search_starts_at"><label class="form-label string optional" for="search_starts_at">Starts at</label><input class="form-control string optional" type="date" name="starts_at" id="search_starts_at"></div>
+          <div class="mb-3 string optional search_ends_at"><label class="form-label string optional" for="search_ends_at">End at</label><input class="form-control string optional" type="date" name="ends_at" id="search_ends_at"></div>
+            <div class="search_bar_button">
+            <input type="submit" name="commit" value="Searching" class="btn btn-ghost" data-disable-with="Searching">
+          <a class="btn btn-ghost" href="/superpowers">Clear filters</a>
+            </div></form> %>
