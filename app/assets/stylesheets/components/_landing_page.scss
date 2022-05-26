@@ -9,10 +9,27 @@
 }
 
 .Explore {
-  padding: 15px 20px;
-  background-color: rgba(255, 255, 255, 0.785);
-  border: 2px solid white;
-  color: yellow;
+  display: inline-block;
+  outline: 0;
+  border: 1px solid rgba(122, 122, 122, 0.364);
+  margin-top: 5%;
+  cursor: pointer;
+  font-weight: 600;
+  color: rgb(26, 26, 178);
+
+  font-size: 14px;
+  height: 38px;
+  padding: 8px 24px;
+  border-radius: 50px;
+  box-shadow: 1px 2px 2px rgb(59, 59, 59);
+  transition: all .2s ease-out;
+
+}
+
+
+
+.Explore:hover {
+  box-shadow: 1px 2px 3px rgba(185, 185, 185, 0.473);
 }
 
 .title2 {
@@ -32,12 +49,10 @@
 
 .title {
   position: absolute;
-  top: 200px;
-  left: 20px;
+  top: 48%;
+  left: 25px;
   font-weight: bold;
   font-size: 200px;
-  margin-left: 2%;
-  margin-top: 20%;
   color: rgba(0, 0, 0, 0.429);
   font-family: "Avengeance";
 }
