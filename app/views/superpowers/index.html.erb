@@ -1,15 +1,4 @@
-
-<h1><strong>All the superpowers</strong></h1>
-<div>
-  <ul>
-  <% @superpowers.each do |superpower| %>
-
-  <li>
- <%= link_to superpower.name, superpower_path(superpower) %>
- <%= superpower.description%>
- <%= superpower.price %>
-      >
-
+<%#
 <%# barre de recherche %>
 <h1>All superpowers</h1>
   <div>
