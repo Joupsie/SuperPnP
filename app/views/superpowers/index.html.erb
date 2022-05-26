@@ -57,7 +57,6 @@
 
 
 <div  class="container">
-<h1><strong>All the superpowers</strong></h1>
     <div class="cards-container">
       <% @superpowers.each do |superpower| %>
         <div class="card-trip">
@@ -70,9 +69,8 @@
           <% end %>
 
           <div class="card-trip-infos">
-              <h2><%= superpower.name%></h2>
-              <h2><%= superpower.description%></h2>
-              <h2 class="card-trip-pricing"><%= superpower.price %>$</h2>
+              <h3 id=color><%= superpower.name%></h3>
+              <h3 class="card-trip-pricing"><%= superpower.price %>$</h3>
               <%# class="card-trip-user avatar-bordered" %>
           </div>
         </div>

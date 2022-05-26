@@ -99,17 +99,17 @@ h1 {
 
 }
 
-.card-trip-infos h2 {
+.card-trip-infos h3 {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #3a40b6
+  color: #DE191E;
 }
 
 .card-trip-infos a {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
 
-  color: #3a40b6;
+  color: #000001;
 
 }
 
@@ -152,4 +152,8 @@ h1 {
   height: 15em;
   width: 100%;
   object-fit: cover;
+}
+
+#color {
+  color:black;
 }
