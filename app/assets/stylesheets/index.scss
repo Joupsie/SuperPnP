@@ -1,3 +1,5 @@
+
+
 h1 {
   text-align: center;
 }
@@ -21,13 +23,19 @@ h1 {
 }
 
 .btn-ghost {
-  color: #4A4A4A;
-  border: 1px solid #3a40b6;
+  color: white;
+  border: 1px solid #0D285E;
   padding: 8px 24px;
   border-radius: 50px;
-  font-weight: lighter;
   opacity: 0.6;
-  transition: opacity 0.3s ease;
+  // transition: opacity 0.3s ease;
+  font-size: 18px;
+  background-color: #0D285E;
+}
+
+.btn-ghost:hover{
+  color:white;
+  background-color: #1F4D84;
 }
 
 .cards-container {
@@ -100,7 +108,9 @@ h1 {
 .card-trip-infos a {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #3a40b6
+
+  color: #3a40b6;
+
 }
 
 .search-bar-container {
@@ -117,8 +127,8 @@ h1 {
 }
 
 .text-part {
-  color: #4A4A4A;
-  border: 1px solid #3a40b6;
+  color: #0D285E;
+  border: 2px solid #0D285E;
   padding: 8px 24px;
   border-radius: 50px;
   font-weight: lighter;
@@ -136,4 +146,10 @@ h1 {
   margin: 30px;
   flex-basis: 40%;
 
+}
+
+.card-trip img {
+  height: 15em;
+  width: 100%;
+  object-fit: cover;
 }
