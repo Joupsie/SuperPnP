@@ -1,5 +1,5 @@
 class SuperpowersController < ApplicationController
-  before_action :set_superpower, only: [:update, :edit, :show, :destroy]
+  before_action :set_superpower, only: [:update, :edit, :show, ]
 
   def index
     if params[:search].present?
@@ -61,11 +61,11 @@ class SuperpowersController < ApplicationController
 
   def destroy
     @superpower = Superpower.find(params[:id])
-    @superpower.user = current_user
     @superpower.destroy
     redirect_to superpowers_path(@superpowers)
-
   end
+
+
 
   private
 
