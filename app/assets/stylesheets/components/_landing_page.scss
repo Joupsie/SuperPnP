@@ -1,11 +1,18 @@
 .containerSP {
   font-family: Georgia, 'Times New Roman', Times, serif;
   min-height: 100vh;
-  min-width: 500px;
+  min-width: 100vw;
   background: rgba(0, 0, 0, 0.885);
   display: flex;
   justify-self: center;
   align-self: center;
+}
+
+.Explore {
+  padding: 15px 20px;
+  background-color: rgba(255, 255, 255, 0.785);
+  border: 2px solid white;
+  color: yellow;
 }
 
 .title2 {
@@ -39,5 +46,5 @@
   object-fit: cover;
   margin-top: 30%;
   height: 300px;
-  width: 300spx;
+
 }
