@@ -1,3 +1,11 @@
+
+
+<%= render 'shared/topnavbar' %>
+<br>
+<h1>All superpowers</h1>
+  <div>
+    <div>
+
 <%#
 <%# barre de recherche %>
 
@@ -6,10 +14,9 @@
         <h1 class="title2">SuperPnP</h1>
         <img class="logoSP" src="<%= asset_url('logoSP.png') %>" alt="">
       </div>
-
-
   <div class ="search-bar-container" >
     <div class="search-form">
+
       <%= simple_form_for :search, method: :get,
         defaults: { required: false } do |f| %>
           <%= f.input :search, placeholder: 'Which power do you want?',
