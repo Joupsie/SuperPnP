@@ -1,29 +1,28 @@
 
 <%= render 'shared/topnavbar' %>
-<div class ="img_banner">
-  <% @superpower.photos.each do |photo|%>
-    <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
-  <% end %>
-</div>
+<div class ="img_banner"></div>
 
 
 <div class="bigcontainer">
   <div class ="superpower_card">
-  <div class ="img_banner">
-  <% @superpower.photos.each do |photo|%>
-    <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
-  <% end %>
-</div>
-    <h1><%= @superpower.name %> </h1>
-    <h2><%= @superpower.description%></h2>
-    <p><%= @superpower.price%></p>
+    <div class ="img_banner">
+      <% @superpower.photos.each do |photo|%>
+        <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
+      <% end %>
+    </div>
+      <h1><%= @superpower.name %> </h1>
+      <h2><%= @superpower.description%></h2>
+      <h3><p><%= @superpower.price%> $</p></h3>
+    <p class= "btn btn-ghost" >
+      <%= link_to "edit", edit_superpower_url(@superpower) %> </p>
+    <p class= "btn btn-ghost"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
+    </p>
   </div>
-  <%= link_to "edit", edit_superpower_url(@superpower) %>
-   <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
+
   <div class="bookingcontainer">
-  <div class="container">
-    <div class="form-wrapper">
-      <%= simple_form_for [@superpower, @booking] do |f| %>
+    <div class="container">
+      <div class="form-wrapper">
+        <%= simple_form_for [@superpower, @booking] do |f| %>
         <%= f.input :starts_at, label: "Select your renting dates 📆 ",
                                 as: :string,
                                 required: false,
@@ -32,30 +31,22 @@
                               as: :string,
                               required: false,
                               input_html: { id: "range_end", class: "d-none" } %>
-        <%= f.button :submit, "Book", class: "btn btn-primary" %>
-      <% end %>
+        <%= f.button :submit, "Book", class: "btn btn-ghost" %>
+        <% end %>
+      </div>
+    </div>
+    <div id="booking-form-div"
+        data-bookings="<%= @bookings_dates.to_json %>">
     </div>
   </div>
-
-  <div id="booking-form-div"
-      data-bookings="<%= @bookings_dates.to_json %>">
-  </div>
-  </div>
-</div>
-<br>
-<br>
-<div data-controller="popup">
-  <div class="d-none" data-popup-target="modal">
-    <%= simple_form_for [ @superpower, @review ] do |f| %>
-      <%= f.input :content %>
-      <%= f.submit "Send", class: "btn btn-primary"%>
-    <% end %>
-  </div>
-  <a href="#" data-action="click->popup#toggleModal">Add a review !</a>
 </div>
 
-<hr>
-  <div class="col-12 col-sm-6">
+<br>
+<br>
+
+
+  <hr>
+<div class="col-12 col-sm-6">
     <h3>Reviews</h3>
     <% if @superpower.reviews.empty? %>
       <small><em class="text-muted">Be the first one to review this list</em></small>
@@ -65,12 +56,18 @@
             <i class="fas fa-star star-yellow"></i>
           <% end %>
       <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
-      <p class="mb-0"><%= review.content %></p>
+      <p class="mb-0"> <hr><%= review.content %> <hr></p>
       <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
       <% end %>
-  </div>
-  <hr>
+</div>
 
-  <%=link_to root_path do %>
-        <i class="fa fa-history">Go back ↩️</i>
-      <% end %>
+<div data-controller="popup">
+  <div class="d-none" data-popup-target="modal">
+    <%= simple_form_for [ @superpower, @review ] do |f| %>
+      <%= f.input :content, class: "review_content"%>
+      <%= f.submit "Send", class: "btn btn-ghost"%>
+    <% end %>
+  </div>
+    <hr>
+  <a href="#" data-action="click->popup#toggleModal" class= "btn btn-ghost">Add a review !</a>
+</div>
