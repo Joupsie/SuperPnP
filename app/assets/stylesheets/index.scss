@@ -41,7 +41,7 @@ h1 {
 .cards-container {
   padding-bottom: 20px;
   display: flex;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -55,10 +55,10 @@ h1 {
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 300px;
   width: 450px;
-  margin:30px;
+  margin: 30px;
 
 }
 
@@ -99,16 +99,18 @@ h1 {
 
 }
 
-.card-trip-infos h2{
+.card-trip-infos h2 {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:#3a40b6
+  color: #3a40b6
 }
 
-.card-trip-infos a{
+.card-trip-infos a {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:#3a40b6
+
+  color: #3a40b6;
+
 }
 
 .search-bar-container {

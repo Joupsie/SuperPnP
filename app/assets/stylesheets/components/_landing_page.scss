@@ -1,8 +1,8 @@
 .containerSP {
   font-family: Georgia, 'Times New Roman', Times, serif;
-  min-height: 1000px;
+  min-height: 100vh;
   min-width: 500px;
-  background: linear-gradient(180deg, #100050, #24126d, #412e8a, #6554a8, #9083c5, #c4bce2, #ffffff);
+  background: rgba(0, 0, 0, 0.885);
   display: flex;
   justify-self: center;
   align-self: center;
@@ -13,21 +13,25 @@
   font-weight: bold;
   font-size: 200px;
   margin-left: 5%;
-  margin-top: 20%;
-  color: rgba(255, 0, 0, 0.67);
+  margin-top: 25%;
+  color: rgba(222, 0, 0, 0.637);
   font-family: "Avengeance";
+}
+
+.title2:hover {
+  color: rgba(222, 0, 0, 0.861);
 }
 
 
 .title {
   position: absolute;
-  top: 15px;
+  top: 200px;
   left: 20px;
   font-weight: bold;
   font-size: 200px;
   margin-left: 2%;
   margin-top: 20%;
-  color: rgba(0, 0, 0, 0.632);
+  color: rgba(0, 0, 0, 0.429);
   font-family: "Avengeance";
 }
 
