@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   devise_for :users
-  root to: 'superpowers#index'
+  root to: 'superpowers#landing'
 
   resources :superpowers do
     resources :bookings, only: [:new, :create]
