@@ -76,11 +76,11 @@ ul {
 }
 .style_logo:hover {
   width: 130px; /* on affiche l'image au carré */
-  height: 129px;
+  height: 110px;
   border-radius: 50%;  /* on arrondit l'image */
   -webkit-transform: rotate(360deg); /* rotation de l'image */
   transform: rotate(360deg);
-  padding-top: 10px;
+  padding-top: 20px;
 }
 // .topnavbar a {
 //   transition: all 0.5s;
