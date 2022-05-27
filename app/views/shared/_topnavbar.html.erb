@@ -1,6 +1,6 @@
 <div class="topnavbar">
     <div class="left col-4">
-      <ul class="text_left">
+      <ul class="text_left" >
         <li><a href="<%= superpowers_path %>">Home</a></li>
         <li><a href="<%= new_superpower_path %>">Rent</a></li>
       </ul>
@@ -12,7 +12,7 @@
       <ul>
         <li><%= image_tag("chucklewok.jpg", :class => "style_user_picture") %></li>
         <% if user_signed_in? %>
-          <li class="logout" style="margin-top: 12px;"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
+          <li class="logout" style="margin-top: 25px;"><%= link_to "logout", destroy_user_session_path, method: :delete %></li>
         <% else %>
           <li><a href="<%= new_user_session_path %>">Login</a></li>
          <% end %>
