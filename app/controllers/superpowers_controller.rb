@@ -65,8 +65,6 @@ class SuperpowersController < ApplicationController
     redirect_to superpowers_path(@superpowers)
   end
 
-
-
   private
 
   def set_superpower
