@@ -52,15 +52,21 @@ h1 {
   width: 200px;
 }
 
+
+.btn-ghost:hover {
+  color: white;
+  background-color: #1F4D84;
+
 .btnclear:hover{
   color:white;
   background-color: #8c8c8c;
+
 }
 
 .cards-container {
   padding-bottom: 20px;
   display: flex;
-  flex-wrap: wrap ;
+  flex-wrap: wrap;
   align-items: center;
 }
 
@@ -74,10 +80,10 @@ h1 {
 .card-trip {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   height: 300px;
   width: 450px;
-  margin:30px;
+  margin: 30px;
 
 }
 
@@ -125,14 +131,14 @@ h1 {
   color: #DE191E;
 }
 
-.card-trip-infos h2{
+.card-trip-infos h2 {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  color:#3a40b6;
+  color: #3a40b6;
 
 }
 
-.card-trip-infos a{
+.card-trip-infos a {
   text-decoration: none;
   font-family: Georgia, 'Times New Roman', Times, serif;
   color: #000001;
@@ -176,7 +182,9 @@ h1 {
 
   margin: 30px;
   font-size: 30px;
+
   margin-top: 20px;
+
 }
 
 .search-form {
@@ -192,5 +200,5 @@ h1 {
 }
 
 #color {
-  color:black;
+  color: black;
 }
