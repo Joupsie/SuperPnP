@@ -6,20 +6,23 @@
   display: flex;
   justify-self: center;
   align-self: center;
+  z-index: 0;
 }
 
 .Explore {
-  display: inline-block;
+  position: absolute;
+  right: -5%;
   outline: 0;
   border: 1px solid rgba(122, 122, 122, 0.364);
-  margin-top: 5%;
+  margin-top: 10%;
+  margin-right: 50%;
   cursor: pointer;
   font-weight: 600;
   color: rgb(26, 26, 178);
-
-  font-size: 14px;
-  height: 38px;
-  padding: 8px 24px;
+  z-index: 1;
+  font-size: 42px;
+  height: 79px;
+  padding: 8px 74px;
   border-radius: 50px;
   box-shadow: 1px 2px 2px rgb(59, 59, 59);
   transition: all .2s ease-out;
@@ -36,30 +39,40 @@
   position: relative;
   font-weight: bold;
   font-size: 200px;
-  margin-left: 5%;
+  margin-left: 15%;
   margin-top: 25%;
   color: rgba(222, 0, 0, 0.637);
-  font-family: "Avengeance";
+  font-family: "Avengeance" !important;
+  transition-duration: 0.5s;
+  cursor: pointer;
 }
 
 .title2:hover {
   color: rgba(222, 0, 0, 0.861);
+  transition-duration: 0.5s;
 }
 
 
 .title {
   position: absolute;
   top: 48%;
-  left: 25px;
+  left: 10%;
   font-weight: bold;
   font-size: 200px;
   color: rgba(0, 0, 0, 0.429);
-  font-family: "Avengeance";
+  font-family: "Avengeance" !important;
 }
 
 .logoSP {
-  object-fit: cover;
-  margin-top: 30%;
-  height: 300px;
 
+  margin-top: 22%;
+  height: 300px;
+  opacity: 50%;
+  transition-duration: 0.5s;
+
+}
+
+.logoSP:hover {
+  opacity: 100%;
+  transition-duration: 0.5s;
 }
