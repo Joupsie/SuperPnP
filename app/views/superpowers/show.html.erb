@@ -59,6 +59,9 @@
           <% review.content do %>
             <i class="fas fa-star star-yellow"></i>
           <% end %>
+          <small><em class="text-muted"><%= distance_of_time_in_words_to_now(review.created_at) %> ago</em></small>
+          <p class="mb-0"> <hr><%= review.content %> <hr></p>
+          <%= link_to "delete", review_path(review), method: :delete, data: { confirm: "Are you sure you want to remove your review? ", class: 'text-danger'} %>
         <% end %>
     </div>
 
@@ -71,7 +74,6 @@
       </div>
         <hr>
       <a href="#" data-action="click->popup#toggleModal" class= "btn btn-ghost">Add a review !</a>
-
     </div>
   </div>
 </div>
