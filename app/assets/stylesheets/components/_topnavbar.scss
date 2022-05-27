@@ -53,13 +53,36 @@ ul {
   justify-content: center;
 }
 
+// .style_logo {
+//   margin-top: -4%;
+//   width: 60%;
+//   height: 189%;
+//   opacity: 80%;
+//   transition-duration: 1s;
+// }
+
+// .style_logo:hover {
+//   opacity: 100%;
+//   transition-duration: 1s;
+// }
+
 .style_logo {
   margin-top: -4%;
   width: 60%;
   height: 189%;
-
+  -webkit-filter: grayscale(0) blur(0px);
+  filter: grayscale(0) blur(0px);
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
-
+.style_logo:hover {
+  width: 130px; /* on affiche l'image au carré */
+  height: 110px;
+  border-radius: 50%;  /* on arrondit l'image */
+  -webkit-transform: rotate(360deg); /* rotation de l'image */
+  transform: rotate(360deg);
+  padding-top: 20px;
+}
 // .topnavbar a {
 //   transition: all 0.5s;
 //   position: relative;
