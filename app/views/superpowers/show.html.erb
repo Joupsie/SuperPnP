@@ -13,11 +13,12 @@
       <h1><%= @superpower.name %> </h1>
       <h2><%= @superpower.description%></h2>
       <h3><p><%= @superpower.price%> $</p></h3>
+
     <p class= "btn btn-ghost" >
       <%= link_to "edit", edit_superpower_url(@superpower) %> </p>
     <p class= "btn btn-ghost"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
     </p>
-  </div>
+    </div>
 
   <div class="bookingcontainer">
     <div class="container">
