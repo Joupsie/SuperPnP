@@ -1,15 +1,17 @@
 
-<%= render 'shared/topnavbar' %>
+<%=render 'shared/topnavbar'%>
 <div class ="img_banner"></div>
 
 
 <div class="bigcontainer">
   <div class ="superpower_card">
     <div class ="img_banner">
-      <% @superpower.photos.each do |photo|%>
+
+    </div>
+
+   <% @superpower.photos.each do |photo|%>
         <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
       <% end %>
-    </div>
       <h1><%= @superpower.name %> </h1>
       <h2><%= @superpower.description%></h2>
       <h3><p><%= @superpower.price%> $</p></h3>
@@ -48,7 +50,7 @@
 
   <hr>
 <div class="col-12 col-sm-6">
-    <h3>Reviews</h3>
+    <%= pluralize @superpower.reviews.size, "Reviews" %>
     <% if @superpower.reviews.empty? %>
       <small><em class="text-muted">Be the first one to review this list</em></small>
     <% end %>
@@ -72,3 +74,5 @@
     <hr>
   <a href="#" data-action="click->popup#toggleModal" class= "btn btn-ghost">Add a review !</a>
 </div>
+
+<% console %>
