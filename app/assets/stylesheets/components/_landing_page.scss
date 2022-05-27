@@ -9,32 +9,6 @@
   z-index: 0;
 }
 
-.Explore {
-  position: absolute;
-  right: -5%;
-  outline: 0;
-  border: 1px solid rgba(122, 122, 122, 0.364);
-  margin-top: 10%;
-  margin-right: 50%;
-  cursor: pointer;
-  font-weight: 600;
-  color: rgb(26, 26, 178);
-  z-index: 1;
-  font-size: 42px;
-  height: 79px;
-  padding: 8px 74px;
-  border-radius: 50px;
-  box-shadow: 1px 2px 2px rgb(59, 59, 59);
-  transition: all .2s ease-out;
-
-}
-
-
-
-.Explore:hover {
-  box-shadow: 1px 2px 3px rgba(185, 185, 185, 0.473);
-}
-
 .title2 {
   position: relative;
   font-weight: bold;
@@ -64,7 +38,7 @@
 }
 
 .logoSP {
-
+  position: absolute;
   margin-top: 22%;
   height: 300px;
   opacity: 50%;
@@ -73,6 +47,108 @@
 }
 
 .logoSP:hover {
-  opacity: 100%;
+  opacity: 90%;
   transition-duration: 0.5s;
+  transform: rotateY(360deg);
+}
+
+body {
+  background-color: #ccc;
+}
+
+.title2 {
+
+
+  animation-name: bobbingAnim;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: bobbingAnim;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+
+
+@keyframes bobbingAnim {
+  0% {
+    transform: translate(0px, 0px);
+    animation-timing-function: ease-in-out
+  }
+
+  50% {
+    transform: translate(0px, 15px);
+    animation-timing-function: ease-in-out
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    animation-timing-function: ease-in-out
+  }
+}
+
+@-webkit-keyframes bobbingAnim {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 12px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+}
+
+.logoSP {
+
+
+  animation-name: bobbingAnim2;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-play-state: running;
+  -webkit-animation-name: bobbingAnim;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-play-state: running;
+}
+
+
+@keyframes bobbingAnim2 {
+  0% {
+    transform: translate(0px, 0px);
+    animation-timing-function: ease-in-out
+  }
+
+  50% {
+    transform: translate(0px, 15px);
+    animation-timing-function: ease-in-out
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+    animation-timing-function: ease-in-out
+  }
+}
+
+@-webkit-keyframes bobbingAnim2 {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+
+  50% {
+    -webkit-transform: translate(0px, 12px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+
+  100% {
+    -webkit-transform: translate(0px, 0px);
+    -webkit-animation-timing-function: ease-in-out
+  }
+
 }
