@@ -39,8 +39,8 @@ h1 {
 .btnsearch:hover{
   color:white;
   background-color: #8c8c8c;
-  transition-duration: 0.8s;
-  transform: translateY(-10px);
+  transition-duration: 0.4s;
+  transform: translateY(-5px);
 }
 
 .btnclear {
@@ -51,7 +51,7 @@ h1 {
   font-size: 18px;
   background-color: #202020;
   width: 120px;
-  transition-duration: 0.8s;
+  transition-duration: 0.2s;
 }
 
 
@@ -64,8 +64,8 @@ h1 {
 .btnclear:hover{
   color:white;
   background-color: #8c8c8c;
-  transition-duration: 0.8s;
-  transform: translateY(-10px);
+  transition-duration: 0.2s;
+  transform: translateY(-5px);
 }
 
 .cards-container {
@@ -93,8 +93,8 @@ h1 {
 }
 
 .card-trip:hover {
-  transform: translateY(-30px);
-  transition-duration: 0.8s;
+  transform: translateY(-10px);
+  transition-duration: 0.2s;
 }
 
 .card-trip > img {
