@@ -1,4 +1,41 @@
 
+<<<<<<< HEAD
+<%# <%= render 'shared/topnavbar' %>
+<div class ="img_banner"></div>
+
+
+<div class="bigcontainer">
+  <div class ="superpower_card">
+    <div class ="img_banner">
+      <% @superpower.photos.each do |photo|%>
+        <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
+      <% end %>
+    </div>
+      <h1><%= @superpower.name %> </h1>
+      <h2><%= @superpower.description%></h2>
+      <h3><p><%= @superpower.price%> $</p></h3>
+
+    <p class= "btn btn-secondary" >
+      <%= link_to "edit", edit_superpower_url(@superpower) %> </p>
+    <p class= "btn btn-secondary"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
+    </p>
+    </div>
+
+  <div class="bookingcontainer">
+    <div class="container">
+      <div class="form-wrapper">
+        <%= simple_form_for [@superpower, @booking] do |f| %>
+        <%= f.input :starts_at, label: "Select your renting dates 📆 ",
+                                as: :string,
+                                required: false,
+                                input_html: { id: "range_start", class: "d-none"} %>
+        <%= f.input :ends_at, label: false,
+                              as: :string,
+                              required: false,
+                              input_html: { id: "range_end", class: "d-none" } %>
+        <%= f.button :submit, "Book", class: "btn btn-ghost" %>
+        <% end %>
+=======
 <%=render 'shared/topnavbar'%>
 <div class ="img_banner"></div>
 <div data-controller="validate">
@@ -44,6 +81,7 @@
         <div id="booking-form-div"
             data-bookings="<%= @bookings_dates.to_json %>">
         </div>
+>>>>>>> f05a112074fb0ad0af80d0184e873834ae04d58b
       </div>
     </div>
 
@@ -65,6 +103,14 @@
         <% end %>
     </div>
 
+<<<<<<< HEAD
+<div data-controller="popup">
+  <div class="d-none" data-popup-target="modal">
+    <%= simple_form_for [ @superpower, @review ] do |f| %>
+      <%= f.input :content, class: "review_content"%>
+      <%= f.submit "Send", class: "btn btn-secondary"%>
+    <% end %>
+=======
     <div data-controller="popup">
       <div class="d-none" data-popup-target="modal">
         <%= simple_form_for [ @superpower, @review ] do |f| %>
@@ -75,5 +121,6 @@
         <hr>
       <a href="#" data-action="click->popup#toggleModal" class= "btn btn-ghost">Add a review !</a>
     </div>
+>>>>>>> f05a112074fb0ad0af80d0184e873834ae04d58b
   </div>
 </div>
