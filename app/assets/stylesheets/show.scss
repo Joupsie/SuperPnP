@@ -1,5 +1,25 @@
 body {
+  position: relative;
   background-color: white;
+}
+.popup {
+  position: fixed;
+  border: 2px solid black;
+  top: 30%;
+  right: 25%;
+  background-color: white;
+  padding: 30px 40px;
+  width: 600px;
+  border-radius: 0 25px 0 25px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: -1;
+  &.active {
+    opacity: 1;
+    transition: opacity 0.3s;
+    z-index: 3;
+    filter: blur(0);
+  }
 }
 
 .img_prez {
@@ -7,12 +27,23 @@ body {
   border-radius: 25px;
   background-image: url(../images/superpower.jpg);
 }
+.bigbigcontainer {
+  &.active {
+    filter: blur(8px);
+  }
+}
 
 .bigcontainer {
-  margin-top: 15%;
+  padding-top: 15%;
   display: flex;
   justify-content: space-evenly !important;
   align-items: center;
+}
+
+
+.popup h1 {
+  text-align: center;
+
 }
 
 .bookingcontainer {
@@ -35,5 +66,11 @@ body {
 
 .review_content {
   border: 2px solid #0D285E;
+
+}
+
+.carousel-inner {
+  height: 200px;
+  width: 300px;
 
 }

@@ -44,7 +44,7 @@ class SuperpowersController < ApplicationController
 
     if @superpower.save
 
-      redirect_to superpowers_path(@superpowers)
+      redirect_to superpower_path(@superpower)
 
     else
       render :new
@@ -56,7 +56,7 @@ class SuperpowersController < ApplicationController
 
   def update
     @superpower.update(superpower_params)
-    redirect_to superpowers_path(@superpowers)
+    redirect_to superpower_path(@superpower)
   end
 
   def destroy
@@ -64,8 +64,6 @@ class SuperpowersController < ApplicationController
     @superpower.destroy
     redirect_to superpowers_path(@superpowers)
   end
-
-
 
   private
 
