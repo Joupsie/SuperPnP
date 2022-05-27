@@ -9,12 +9,7 @@ class BookingsController < ApplicationController
     @superpower = Superpower.find(params[:superpower_id])
     @booking.superpower = @superpower
     @booking.user = current_user
-    if @booking.save
-      redirect_to reservation_validate_path
-
-    else
-      render :new
-    end
+    @booking.save
   end
 
   def destroy
