@@ -1,13 +1,14 @@
 .topnavbar {
   background-color: #202020 !important;
-  text-transform:uppercase;
+  text-transform: uppercase;
+  font-family: "Avengeance" !important;
   display: flex;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
   right: 0;
-  height: 80px;
+  height: 90px;
   box-shadow: 0 0 25px 0 black;
 }
 
@@ -33,12 +34,16 @@ ul {
 .topnavbar li a {
   color: white;
   text-decoration: none;
+  font-family: "Avengeance" !important;
+
+
 }
 
 .style_user_picture {
-  border: 2px solid black;
-  width: 50px;
-  height: 50px;
+  border: 3px solid rgb(196, 192, 210);
+  box-shadow: 1px 2px 5px rgba(244, 246, 245, 0.515);
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
 }
 
@@ -48,8 +53,10 @@ ul {
 }
 
 .style_logo {
-  width: 50%;
-  height: 150%;
+  margin-top: 3%;
+  width: 65%;
+  height: 200%;
+
 }
 
 .topnavbar a {
@@ -57,42 +64,11 @@ ul {
   position: relative;
   padding: 8px 32px;
 }
+
 .topnavbar a span {
   z-index: 2;
   display: block;
   position: absolute;
   width: 100%;
   height: 100%;
-}
-.topnavbar a::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.1);
-}
-.topnavbar a::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  transition: all 0.5s;
-  border: 1px solid rgba(255,255,255,0.2);
-  background-color: rgba(255,255,255,0.1);
-}
-.topnavbar a:hover::before {
-  transform: rotate(-45deg);
-  background-color: rgba(255,255,255,0);
-}
-.topnavbar a:hover::after {
-  transform: rotate(45deg);
-  background-color: rgba(255,255,255,0);
 }
