@@ -14,7 +14,7 @@
       <div class ="superpower_card">
         <div class ="img_banner">
           <% @superpower.photos.each do |photo|%>
-            <%= cl_image_tag photo.key, height: 200, width: 300, crop: :fill %>
+            <%= cl_image_tag photo.key, height: 300, width: 400, crop: :fill %>
           <% end %>
         </div>
         <h1><%= @superpower.name %> </h1>
@@ -22,7 +22,7 @@
         <h3><p><%= @superpower.price%> $</p></h3>
         <p class= "btn btn-secondary" >
           <%= link_to "edit", edit_superpower_url(@superpower) %> </p>
-        <p class= "btn btn-secondary"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
+        <p class= "btn btn-secondary"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-white'} %>
         </p>
       </div>
       <div class="bookingcontainer">
@@ -37,7 +37,7 @@
                                   as: :string,
                                   required: false,
                                   input_html: { id: "range_end", class: "d-none" } %>
-            <%= f.button :submit, "Book", class: "btn btn-secondary" %>
+            <%= f.button :submit, "POWER UP", class: "btn btn-secondary" %>
             <% end %>
           </div>
         </div>

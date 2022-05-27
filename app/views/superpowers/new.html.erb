@@ -12,11 +12,11 @@
       <div class="bg-white rounded p-3 shadow">
         <h3>Rent my superpower</h3>
         <%= simple_form_for @superpower do |f| %>
-          <%= f.input :photo, as: :file %>
+          <%= f.input :photos, as: :file, input_html: { multiple: true } %>
           <%= f.input :name %>
           <%= f.input :description %>
           <%= f.input :price %>
-          <%= f.submit class: 'btn btn-secondary' ,method: :create %>
+          <%= f.submit class: 'btn btn-secondary' %>
         <% end %>
       </div>
     </div>
