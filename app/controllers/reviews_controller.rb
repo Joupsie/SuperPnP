@@ -20,7 +20,7 @@
     def destroy
       @review = Review.find(params[:id])
       @review.destroy
-      redirect_to superpower_path(@review.superpower)
+      redirect_to superpowers_path(@Reviews)
     end
 
     private
