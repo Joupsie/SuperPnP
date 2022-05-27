@@ -23,38 +23,40 @@ h1 {
 
 .btnsearch {
   color: white;
-  border: 1px solid #202020;
   padding: 8px 24px;
-  border-radius: 25px;
-  opacity: 0.6;
-  // transition: opacity 0.3s ease;
+  border: none;
+  border-radius: 25px 0px 25px 0px;
+  text-align: center;
   font-size: 18px;
   background-color: #202020;
-  width: 200px;
+  width: 120px;
   margin-right: 100px;
+  transition-duration: 0.8s;
 }
 
 .btnsearch:hover{
   color:white;
   background-color: #8c8c8c;
+  transition-duration: 0.8s;
+  transform: translateY(-10px);
 }
 
 .btnclear {
   color: white;
-  border: 1px solid #202020;
   padding: 8px 24px;
-  border-radius: 25px;
-  opacity: 0.6;
+  border-radius: 0px 25px 0px 25px;
   text-align: center;
-  // transition: opacity 0.3s ease;
   font-size: 18px;
   background-color: #202020;
-  width: 200px;
+  width: 120px;
+  transition-duration: 0.8s;
 }
 
 .btnclear:hover{
   color:white;
   background-color: #8c8c8c;
+  transition-duration: 0.8s;
+  transform: translateY(-10px);
 }
 
 .cards-container {
@@ -78,7 +80,12 @@ h1 {
   height: 300px;
   width: 450px;
   margin:30px;
+  transition-duration: 0.8s;
+}
 
+.card-trip:hover {
+  transform: translateY(-30px);
+  transition-duration: 0.8s;
 }
 
 .card-trip > img {
