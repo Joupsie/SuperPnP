@@ -1,4 +1,4 @@
 class Review < ApplicationRecord
-  belongs_to :superpower, dependent: :delete
+  belongs_to :superpower
   validates :content, presence: true
 end

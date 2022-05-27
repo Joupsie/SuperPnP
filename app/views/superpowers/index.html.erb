@@ -18,12 +18,12 @@
             value: params.dig(:search) } %>
           </div>
           <div class="pricestyle">
-            <%= f.input :min_price, placeholder: 'Minimum price',
+            <%= f.input :min_price, placeholder: 'Min',
               required: false,
               input_html: { type: :number,
               name: :min_price,
               value: params.dig(:min_price) } %>
-            <%= f.input :max_price, placeholder: "Maximum price",
+            <%= f.input :max_price, placeholder: "Max",
               required: false,
               input_html: { type: :number,
               name: :max_price,

@@ -22,7 +22,7 @@ section {
   }
 }
 
-span {
+.stars span {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -34,7 +34,7 @@ span {
   animation: animate 3s linear infinite;
 }
 
-span::before {
+.stars span::before {
   content: '';
   position: absolute;
   top: 50%;
@@ -71,7 +71,7 @@ span::before {
 //   animation-duration: 1s;
 // }
 
-span:nth-child(2) {
+.stars span:nth-child(2) {
   top: 0;
   right: 80px;
   left: initial;
@@ -79,7 +79,7 @@ span:nth-child(2) {
   animation-duration: 2s;
 }
 
-span:nth-child(3) {
+.stars span:nth-child(3) {
   top: 80px;
   right: 0px;
   left: initial;
@@ -87,7 +87,7 @@ span:nth-child(3) {
   animation-duration: 2s;
 }
 
-span:nth-child(4) {
+.stars span:nth-child(4) {
   top: 0;
   right: 180px;
   left: initial;
@@ -96,7 +96,7 @@ span:nth-child(4) {
   color: yellow;
 }
 
-span:nth-child(5) {
+.stars span:nth-child(5) {
   top: 0;
   right: 150px;
   left: initial;
@@ -104,7 +104,7 @@ span:nth-child(5) {
   animation-duration: 2.5s;
 }
 
-span:nth-child(6) {
+.stars span:nth-child(6) {
   top: 0;
   right: 200px;
   left: initial;
@@ -112,7 +112,7 @@ span:nth-child(6) {
   animation-duration: 3s;
 }
 
-span:nth-child(7) {
+.stars span:nth-child(7) {
   top: 300px;
   right: 0px;
   left: initial;
@@ -128,7 +128,7 @@ span:nth-child(7) {
 // //   animation-duration: 1.25s;
 // }
 
-span:nth-child(9) {
+.stars span:nth-child(9) {
   top: 0px;
   right: 1000px;
   left: initial;
@@ -136,7 +136,7 @@ span:nth-child(9) {
   animation-duration: 2.25s;
 }
 
-span:nth-child(10) {
+.stars span:nth-child(10) {
   top: 0px;
   right: 1000px;
   left: initial;

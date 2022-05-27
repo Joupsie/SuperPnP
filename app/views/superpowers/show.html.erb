@@ -1,5 +1,5 @@
 
-<%= render 'shared/topnavbar' %>
+<%# <%= render 'shared/topnavbar' %>
 <div class ="img_banner"></div>
 
 
@@ -14,9 +14,9 @@
       <h2><%= @superpower.description%></h2>
       <h3><p><%= @superpower.price%> $</p></h3>
 
-    <p class= "btn btn-ghost" >
+    <p class= "btn btn-secondary" >
       <%= link_to "edit", edit_superpower_url(@superpower) %> </p>
-    <p class= "btn btn-ghost"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
+    <p class= "btn btn-secondary"> <%= link_to "delete", superpower_path(@superpower), method: :delete, data: { confirm: "Are you sure you want to delete your superpower 🧐? ", class: 'text-danger'} %>
     </p>
     </div>
 
@@ -66,7 +66,7 @@
   <div class="d-none" data-popup-target="modal">
     <%= simple_form_for [ @superpower, @review ] do |f| %>
       <%= f.input :content, class: "review_content"%>
-      <%= f.submit "Send", class: "btn btn-ghost"%>
+      <%= f.submit "Send", class: "btn btn-secondary"%>
     <% end %>
   </div>
     <hr>
